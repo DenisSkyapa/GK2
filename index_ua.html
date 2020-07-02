@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../images/main_logo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-top">
+            <img class="header__logo" src="../images/Club_residence.svg" alt="Логотип ЖК">
+            <div class="header__call">
+                <div class="call__image_circle">
+                    <img class="call__image" src="../images/call1.svg"></img>
+                </div>
+                <div class="call__right">
+                    <div class="call__right_number">
+                        <a class="call__right_number_link" href="tel:8 (800) 77-512-77">8 (800) 77-512-77</a>
+                    </div>
+                    <div class="call__request"  onclick="request()">Замовити дзвінок</div>
+                </div>
+            </div>
+            <div class="header__language">
+                <a href="index.html" class="language__link-main">RU</a>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="header__nav-left">
+                <div class="nav-left__number nav-left__number-1">01</div>
+                <div class="nav-left__line">
+                    <div class="nav-left__line-active"></div>
+                </div>
+                <div class="nav-left__number nav-left__number-2">02</div>
+            </div>
+            <div class="header__main_content">
+                <div class="header__name_building">Житловий комплекс КЛАБ РЕЗИДЕНС</div>
+                <div class="header__main_text">Квартири вже<br>у продажі!</div>
+                <div class="header__more">
+                    <a class="header__more-link" href="#">ПРО КОМПЛЕКС</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_navigation header__bottom_navigation">
+            <div class="bottom_navigation__points">
+                <div class="bottom_navigation__point bottom_navigation__point-active bottom_navigation__point-active-colorless"></div>
+                <div class="bottom_navigation__point bottom_navigation__point-colorless"></div>
+            </div>
+            <img class="arrow-left arrow" src="../images/arrow-left.svg" onclick="header_change_min()" alt="cледующий ЖК">
+            <img class="arrow-right arrow" src="../images/arrow-right.svg" onclick="header_change_max()" alt="предыдущий ЖК">
+        </div>
+
+        <div class="header-bottom">
+            <div class="header-bottom__navigation">
+                <div class="header-bottom__location">
+                    <img class="location__image" src="../images/nav.svg" alt="адрес"></img>
+                    <div class="location__text">Київ, провулок Радистів, 14а</div>
+                </div>
+                <div class="header-bottom__underground">
+                    <img class="underground__image" src="../images/metro.svg" alt="метро"></img>
+                    <div class="underground__text"></div>
+                </div>
+            </div>
+            <img class="header-bottom__logo" src="../images/comfort.svg" alt="Логотип компании Комфорт"></img>
+        </div>
+    </header>
+
+    <section id="gallery" class="gallery">
+        <div class="gallery-top">
+            <div class="gallery-left">
+                <div class="nav-main">
+                    <div class="nav-main__point"></div>
+                    <div class="nav-main__active-block">
+                        <div class="nav-main__external">
+                            <div class="nav-main__internal">
+                                <div class="nav-main__point nav-main__point-active"></div>
+                            </div>
+                        </div>
+                        <div class="nav-main__text">ГАЛЕРЕЯ</div>
+                    </div>
+                    <div class="nav-main__point"></div>
+                    <div class="nav-main__point"></div>
+                    <div class="nav-main__point"></div>
+                    <div class="nav-main__arrow nav-main__arrow-up">
+                        <a class="nav-main__link-up" href="#header">
+                            <img src="../images/little_arrow-up.svg" alt="Верхняя секция">
+                        </a>
+                    </div>
+                    <div class="nav-main__arrow nav-main__arrow-down">
+                        <a class="nav-main__link-down" href="#layouts">
+                            <img src="../images/little_arrow-down.svg" alt="Нижняя секция">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-main_photo"></div>
+            <div class="gallery__tree"></div>
+        </div>
+        <div class="gallery-bottom">
+            <div class="gallery-bottom__nav">
+                <div class="gallery-bottom__name_buildings">
+                    <div class="gallery-bottom__name_building gallery-bottom__name_building-active">КЛУБНИЙ ДОМ</div>
+                    <div class="gallery-bottom__name_building" onclick="gallery_change_pre()" onclick="gallery_nav_start()">КЛАБ РЕЗИДЕНС</div>
+                </div>
+                <div class="bottom_navigation gallery__bottom_navigation">
+                    <div class="bottom_navigation__points">
+                        <div class="bottom_navigation__point bottom_navigation__point-1"></div>
+                        <div class="bottom_navigation__point bottom_navigation__point-2"></div>
+                        <div class="bottom_navigation__point bottom_navigation__point-3"></div>
+                        <div class="bottom_navigation__point bottom_navigation__point-4"></div>
+                        <div class="bottom_navigation__point bottom_navigation__point-5"></div>
+                    </div>
+                    <img class="arrow-left arrow" src="../images/black_arrow-left.svg" alt="предыдущее фото" onclick="gallery_nav_change_min()">
+                    <img class="arrow-right arrow" src="../images/black_arrow-right.svg" alt="cледующeе фото" onclick="gallery_nav_change_max()">
+                </div>
+            </div>
+            <div class="gallery-bottom__photos">
+                <div data-aos="fade-left" class="gallery-bottom__photo gallery-bottom__photo-1" onclick="gallery_nav_change_1()"></div>
+                <div data-aos="fade-left" class="gallery-bottom__photo gallery-bottom__photo-2" onclick="gallery_nav_change_2()"></div>
+                <div data-aos="fade-left" class="gallery-bottom__photo gallery-bottom__photo-3" onclick="gallery_nav_change_3()"></div>
+                <div data-aos="fade-left" class="gallery-bottom__photo gallery-bottom__photo-4" onclick="gallery_nav_change_4()"></div>
+                <div data-aos="fade-left" class="gallery-bottom__photo gallery-bottom__photo-5" onclick="gallery_nav_change_5()"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="forest_background">
+        <section id="layouts" class="layouts">
+            <div class="nav-main">
+                <div class="nav-main__point"></div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__active-block">
+                    <div class="nav-main__external">
+                        <div class="nav-main__internal">
+                            <div class="nav-main__point nav-main__point-active"></div>
+                        </div>
+                    </div>
+                    <div class="nav-main__text nav-main__text-color">ПЛАНУВАННЯ</div>
+                </div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__arrow nav-main__arrow-up">
+                    <a class="nav-main__link-up" href="#gallery">
+                        <img src="../images/little_arrow-up.svg" alt="Верхняя секция">
+                    </a>
+                </div>
+                <div class="nav-main__arrow nav-main__arrow-down">
+                    <a class="nav-main__link-down" href="#documents">
+                        <img src="../images/little_arrow-down.svg" alt="Нижняя секция">
+                    </a>
+                </div>
+            </div>
+            <div class="layouts__content">
+                <div class="layouts__title">Планування</div>
+                <div class="layouts__main">
+                    <div class="layouts-top">
+                        <div class="layouts__number_rooms layouts__number_rooms-active">1кімнатні</div>
+                        <div class="layouts__areas">
+                            <div class="layouts__area layouts__area-active">36.05м2</div>
+                            <div class="layouts__area">37.84м2</div>
+                            <div class="layouts__area">40.41м2</div>
+                            <div class="layouts__area">41.99м2</div>
+                            <div class="layouts__area">43.18м2</div>
+                            <div class="layouts__area">44.91м2</div>
+                        </div>
+                        <div class="layouts__number_rooms-not_active">
+                            <div class="layouts__number_rooms">2кімнатні</div>
+                            <div class="layouts__number_rooms">3кімнатні</div>
+                            <div class="layouts__number_rooms">З ТЕРАСАМИ</div>
+                        </div>
+                    </div>
+                    <div class="layouts-middle">
+                        <div data-aos="fade-right" class="layouts__drawing"></div>
+                        <div class="layouts__details">
+                            <div class="layouts__rooms_block">
+                                <div class="details__heading">Квартира 36.05м2</div>
+                                <div class="details__rooms">
+                                    <div class="rooms-left">
+                                        <div class="details__room">
+                                            <div class="room__name">Будинок</div>
+                                            <div class="room__area">15</div>
+                                        </div>
+                                        <div class="details__room">
+                                            <div class="room__name">Поверх</div>
+                                            <div class="room__area">4</div>
+                                        </div>
+                                        <div class="details__room">
+                                            <div class="room__name">Житлова площа</div>
+                                            <div class="room__area">36.05м2</div>
+                                        </div>
+                                        <div class="details__room">
+                                            <div class="room__name">Загальна площа</div>
+                                            <div class="room__area">36.05м2</div>
+                                        </div>
+                                    </div>
+                                    <div class="rooms-line"></div>
+                                    <div class="rooms-right">
+                                        <div class="details__room">
+                                            <div class="room__name">Спальня</div>
+                                            <div class="room__area">14.56м2</div>
+                                        </div>
+                                        <div class="details__room">
+                                            <div class="room__name">Кухня</div>
+                                            <div class="room__area">17.34м2</div>
+                                        </div>
+                                        <div class="details__room">
+                                            <div class="room__name">Передпокій</div>
+                                            <div class="room__area">14.56м2</div>
+                                        </div>
+                                        <div class="details__room">
+                                            <div class="room__name">Санвузол</div>
+                                            <div class="room__area">17.34м2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layouts__call">
+                                <div class="call__heading-left">Зв'яжіться з нами,<br>щоб дізнатися більше</div>
+                                <div class="call-right">
+                                    <div class="call__heading-right">Відділ продажу:</div>
+                                    <div class="call__number">(044) 555 57 75</div>
+                                </div>
+                            </div>
+                            <div class="layouts__request"  onclick="request()">Замовити дзвінок</div>
+                            <div class="bottom_navigation">
+                                <div class="bottom_navigation__points">
+                                    <div class="bottom_navigation__point bottom_navigation__point-active"></div>
+                                    <div class="bottom_navigation__point"></div>
+                                    <div class="bottom_navigation__point"></div>
+                                    <div class="bottom_navigation__point"></div>
+                                    <div class="bottom_navigation__point"></div>
+                                    <div class="bottom_navigation__point"></div>
+                                </div>
+                                <img class="arrow-left arrow" src="../images/black_arrow-left.svg" alt="cледующий ЖК">
+                                <img class="arrow-right arrow" src="../images/black_arrow-right.svg" alt="предыдущий ЖК">
+                            </div>
+                        </div>
+                        
+                    </div>
+                        
+                    
+                </div>
+            </div>
+        </section>
+   
+        <section id="documents" class="documents">
+            <div class="nav-main">
+                <div class="nav-main__point"></div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__active-block">
+                    <div class="nav-main__external">
+                        <div class="nav-main__internal">
+                            <div class="nav-main__point nav-main__point-active "></div>
+                        </div>
+                    </div>
+                    <div class="nav-main__text nav-main__text-color">ДОКУМЕНТИ</div>
+                </div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__arrow nav-main__arrow-up">
+                    <a class="nav-main__link-up" href="#layouts">
+                        <img src="../images/little_arrow-up.svg" alt="Верхняя секция">
+                    </a>
+                </div>
+                <div class="nav-main__arrow nav-main__arrow-down">
+                    <a class="nav-main__link-down" href="#contacts">
+                        <img src="../images/little_arrow-down.svg" alt="Нижняя секция">
+                    </a>
+                </div>
+            </div>
+            <div class="documents-main">
+                <div class="documents__title">Документи</div>
+                <div class="documents__headings">
+                    <div class="documents__heading documents__heading1">У нас є всі документи на будівництво,<br>
+                        ознайомитися з ними ви можете в цьому розділі.</div>
+                    <div class="documents__heading documents__heading2">Або під'їхати в відділ продажів: Київська обл. смт.<br>
+                        Гостомель, вул. Варшавська і провулок Варшавський</div>
+                </div>
+                <div class="documents__blocks">
+                    <div data-aos="flip-left" class="documents__block">
+                        <div class="documents__block-top">
+                            <img class="documents__format" src="../images/pdf.svg" alt="Формат файла"></img>
+                            <div class="documents__size">18 Mb</div>
+                        </div>
+                        <div class="documents__block-middle">
+                            Дозвіл на<br>будівництво
+                        </div>
+                        <div class="documents__block-bottom">
+                            <div class="documents__date">21.05.2019</div>
+                            <a class="documents__download" href="#" download>
+                                <img class="download__image" src="../images/load.svg" alt="Загрузка документа">
+                            </a>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left" class="documents__block">
+                        <div class="documents__block-top">
+                            <img class="documents__format" src="../images/pdf.svg" alt="Формат файла"></img>
+                            <div class="documents__size">18 Mb</div>
+                        </div>
+                        <div class="documents__block-middle">
+                            Дозвіл на<br>будівництво
+                        </div>
+                        <div class="documents__block-bottom">
+                            <div class="documents__date">21.05.2019</div>
+                            <a class="documents__download" href="#" download>
+                                <img class="download__image" src="../images/load.svg" alt="Загрузка документа">
+                            </a>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left" class="documents__block">
+                        <div class="documents__block-top">
+                            <img class="documents__format" src="../images/pdf.svg" alt="Формат файла"></img>
+                            <div class="documents__size">18 Mb</div>
+                        </div>
+                        <div class="documents__block-middle">
+                            Дозвіл на<br>будівництво
+                        </div>
+                        <div class="documents__block-bottom">
+                            <div class="documents__date">21.05.2019</div>
+                            <a class="documents__download" href="#" download>
+                                <img class="download__image" src="../images/load.svg" alt="Загрузка документа">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_navigation">
+                    <div class="bottom_navigation__points">
+                        <div class="bottom_navigation__point bottom_navigation__point-active"></div>
+                        <div class="bottom_navigation__point"></div>
+                        <div class="bottom_navigation__point"></div>
+                    </div>
+                    <img class="arrow-left arrow" src="../images/arrow-left.svg" alt="cледующий ЖК">
+                    <img class="arrow-right arrow" src="../images/arrow-right.svg" alt="предыдущий ЖК">
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="contacts" class="contacts">
+        <div class="contacts__content">
+
+
+            <div class="nav-main">
+                <div class="nav-main__point"></div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__point"></div>
+                <div class="nav-main__active-block">
+                    <div class="nav-main__external">
+                        <div class="nav-main__internal">
+                            <div class="nav-main__point nav-main__point-active"></div>
+                        </div>
+                    </div>
+                    <div class="nav-main__text">КОНТАКТИ</div>
+                </div>
+                <div class="nav-main__arrow nav-main__arrow-up">
+                    <a class="nav-main__link-up" href="#documents">
+                        <img src="../images/little_arrow-up.svg" alt="Верхняя секция">
+                    </a>
+                </div>
+                <div class="nav-main__arrow nav-main__arrow-down">
+                    <a class="nav-main__link-down" href="#header">
+                        <img src="../images/little_arrow-down.svg" alt="Нижняя секция">
+                    </a>
+                </div>
+            </div>
+            <div class="contacts-main">
+            
+                <div class="contacts-top">
+                    <div class="contacts__title">Офіс<br>продажів</div>
+                    <div class="contacts__adress">
+                        <div class="adress__title">Адреса</div>
+                        <div class="adress__content">Київ, провулок Радистів, 16</div>
+                        <a class="adress__link" href="https://www.google.com/maps/place/%D1%83%D0%BB.
+                        +%D0%A0%D0%B0%D0%B4%D0%B8%D1%81%D1%82%D0%BE%D0%B2,+16,+%D0%9A%D0%B8%D0%B5%D0%B2,
+                        +02000/@50.4758649,30.667719,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4da908dd21e47:
+                        0x4b967ec85baaabb5!8m2!3d50.4758649!4d30.6699077">Відкрити в навігаторі</a>
+                    </div>
+                    <div class="contacts__phone">
+                        <div class="phone__title">Телефон</div>
+                        <div class="phone__content">(044)  555  57  75 
+                            <span class="phone__time">ПН-ПТ:  9:00 - 18:00</span>
+                        </div>
+                        
+                        <div class="phone__link" onclick="request()">Замовити дзвінок</div>
+                    </div>
+                </div>
+                <div class="contacts-middle">
+                    <div class="contacts__email">
+                        <img class="contacts__email_image" src="../images/mail.svg" alt="письмо">
+                        <div class="contacts__email_text">Написати нам</div>
+                    </div>
+                    <div class="contacts__map"></div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-bottom">
+            <img class="contacts-bottom__logo_building" src="../images/club_house.svg" alt="Логотип ЖК"></img>
+            <img class="contacts-bottom__geo" src="../images/adress.svg" alt="Геолокация"></img>
+            <img class="contacts-bottom__phone_number" src="../images/phone.svg" alt="Телефон"></img>
+            <a class="contacts-bottom__social_network" href="#">
+                <img class="social_network__facebook" src="../images/FB.svg" alt="Фейсбук">
+            </a>
+            <a class="contacts-bottom__social_network" href=#>
+                <img class="social_network__instagram" src="../images/INS.svg" alt="Инстаграм">
+            </a>
+            <div class="contacts-bottom__language contacts-bottom__language-not_active">       
+                <a class="language__link" href="index.html">RU</a>
+            </div>
+            <div class="contacts-bottom__language contacts-bottom__language-active">  
+                <a class="language__link " href="index_ua.html">UA</a>
+            </div>
+            <a class="contacts-bottom__company-developer">
+                <img class="company_developer__link" src="../images/smart.svg" alt="Разработчик сайта Smart Orange">
+            </a>
+        </div>
+    </section>
+
+    <div class="request">
+        <div class="request-center">
+            <div class="request__content">
+                <div class="request__title">Заказать<br>звонок</div>
+                <form class="request__form" action="POST">
+                    <input class="request__input" type="text" required placeholder="Имя:*">
+                    <input class="request__input request__input-phone" type="tel" required placeholder="Телефон:*">
+                    <button class="request__confirm">Відправити</button>
+                </form>
+            </div>
+            <img class="request__exit" src="../images/exit.svg" alt="закрыть" onclick="request__off()">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>
